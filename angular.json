@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "click-outside": {
+    "my-sidebar-template": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/click-outside",
+            "outputPath": "dist/",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "click-outside:build"
+            "browserTarget": "my-sidebar-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "click-outside:build:production"
+              "browserTarget": "my-sidebar-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "click-outside:build"
+            "browserTarget": "my-sidebar-template:build"
           }
         },
         "test": {
@@ -114,15 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "click-outside:serve"
+            "devServerTarget": "my-sidebar-template:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "click-outside:serve:production"
+              "devServerTarget": "my-sidebar-template:serve:production"
             }
           }
         }
       }
-    }},
-  "defaultProject": "click-outside"
+    }
+  },
+  "defaultProject": "my-sidebar-template"
 }
