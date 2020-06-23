@@ -1,0 +1,32 @@
+<div class="sidebar-container">
+    <div #sidebar class="sidebar">
+        <ul class="main-menu">
+            <div class="menu-one-dropdown">
+                <li (click)="handleMenuOne()">Menu 1 <em #arrowDown class="fas fa-arrow-down"></em></li>
+                <div #menuOneDropdownContent class="menu-one-dropdown-content hide">
+                    <ul>
+                        <li>Sub-menu 1</li>
+                        <li>Sub-menu 2</li>
+                    </ul>
+                </div>
+            </div>
+            <div (click)="handleMenuTwo($event)" class="menu-two-dropdown">
+                <li>Menu 2 <em class="fas fa-arrow-right"></em></li>
+                <div #menuTwoDropdownContent class="menu-two-dropdown-content hide">
+                    <ul>
+                        <li>Sub-menu 1</li>
+                        <li>Sub-menu 2</li>
+                    </ul>
+                </div>
+            </div>
+            <li>Menu 3</li>
+        </ul>
+    </div>
+    <div #main class="main">
+        <button class="btn toggle" (click)="handleToggleSidebar()">TOGGLE SIDEBAR</button>
+        <section id="main-subject">
+            <h1>Hello, folks!</h1>
+            <p>This is my sidebar and dropdowns. I did it because I wanted to practice more, I hope you like it.</p>
+        </section>
+    </div>
+</div>
