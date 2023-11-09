@@ -1,0 +1,57 @@
+$burguerWidth: 24px;
+$burguerDistance: 24px;
+
+.ec-ns-navbar {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+  background-color: #fff;
+  padding: 24px;
+  padding-right: calc(24px + $burguerWidth + $burguerDistance);
+  -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.4);
+  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.4);
+  box-sizing: border-box;
+
+  &__desktop {
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+
+  &__mobile {
+    display: flex;
+    align-items: center;
+
+    @media (min-width: 768px) {
+      display: none;
+    }
+
+    .ec-ns-navbar__burguer {
+      height: 16px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      right: 24px;
+      top: 50%;
+      transform: translateY(-50%);
+
+      span {
+        &:first-child,
+        &:nth-child(2),
+        &:last-child {
+          height: 2px;
+          width: $burguerWidth;
+          background-color: var(--test);
+        }
+      }
+    }
+  }
+}

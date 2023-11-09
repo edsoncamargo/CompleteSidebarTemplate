@@ -1,0 +1,17 @@
+<nav class="ec-ns-navbar">
+  <aside class="ec-ns-navbar__desktop">
+    <ng-content select="[desktop]"></ng-content>
+  </aside>
+
+  <aside class="ec-ns-navbar__mobile">
+    <div class="ec-ns-navbar__content">
+      <ng-content select="[mobile]"></ng-content>
+    </div>
+
+    <button #eBurguer class="ec-ns-navbar__burguer">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </aside>
+</nav>
