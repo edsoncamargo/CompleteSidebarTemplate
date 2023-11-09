@@ -66,18 +66,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "my-sidebar-template:build"
+            "buildTarget": "my-sidebar-template:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "my-sidebar-template:build:production"
+              "buildTarget": "my-sidebar-template:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "my-sidebar-template:build"
+            "buildTarget": "my-sidebar-template:build"
           }
         },
         "test": {
