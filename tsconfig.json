@@ -12,7 +12,8 @@
     "importHelpers": true,
     "target": "ES2022",
     "lib": ["es2018", "dom"],
-    "useDefineForClassFields": false
+    "useDefineForClassFields": false,
+    "types": ["cookie"]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
