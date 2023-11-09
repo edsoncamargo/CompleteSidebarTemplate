@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "my-sidebar-template"
+  "defaultProject": "my-sidebar-template",
+  "cli": {
+    "analytics": "a1cd9f9d-9e97-475b-9627-f17f051c051f"
+  }
 }
