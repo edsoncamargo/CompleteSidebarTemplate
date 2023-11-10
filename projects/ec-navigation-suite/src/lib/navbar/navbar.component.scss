@@ -1,16 +1,21 @@
+$navbarHeight: 80px;
 $burguerWidth: 24px;
 $burguerDistance: 24px;
 
 .ec-ns-navbar {
+  $this: &;
+
   width: 100%;
-  height: 80px;
+  height: $navbarHeight;
   display: flex;
   align-items: center;
   justify-content: space-between;
   position: fixed;
+  overflow: hidden;
   top: 0;
   z-index: 10;
-  background-color: #fff;
+  background-color: var(--ec-color-primary-dark);
+  color: var(--ec-color-neutral-100);
   padding: 24px;
   padding-right: calc(24px + $burguerWidth + $burguerDistance);
   -webkit-box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.4);
@@ -25,11 +30,32 @@ $burguerDistance: 24px;
   }
 
   &__mobile {
+    width: 100vw;
     display: flex;
     align-items: center;
+    position: relative;
 
-    @media (min-width: 768px) {
+    &__brand {
+      position: relative;
+      z-index: 999;
+    }
+
+    @media (min-width: 769px) {
       display: none;
+    }
+
+    #{$this}__content {
+      max-height: 0px;
+      height: 100vh;
+      width: 100vw;
+      position: fixed;
+      top: $navbarHeight;
+      left: 0;
+      overflow: hidden;
+      background-color: var(--ec-color-primary-dark);
+      padding: 0px 24px;
+      box-sizing: border-box;
+      transition: all 0.3s ease-in-out;
     }
 
     .ec-ns-navbar__burguer {
@@ -39,8 +65,9 @@ $burguerDistance: 24px;
       align-items: center;
       justify-content: space-between;
       position: absolute;
-      right: 24px;
+      right: calc(($burguerDistance + $burguerWidth) * -1);
       top: 50%;
+      cursor: pointer;
       transform: translateY(-50%);
 
       span {
@@ -49,7 +76,55 @@ $burguerDistance: 24px;
         &:last-child {
           height: 2px;
           width: $burguerWidth;
-          background-color: var(--test);
+          background-color: var(--ec-color-primary);
+          transition: all 0.3s ease-in-out;
+        }
+
+        &:nth-child(2) {
+          position: relative;
+
+          &:before {
+            content: "";
+            height: 2px;
+            width: $burguerWidth;
+            position: absolute;
+            left: 0;
+            transform: rotate(0deg);
+            background-color: var(--ec-color-primary);
+            transition: all 0.3s ease-in-out;
+          }
+        }
+      }
+    }
+  }
+
+  &#{&}--opened {
+    #{$this}__mobile {
+      #{$this}__content {
+        max-height: 9999px;
+        padding: 24px;
+      }
+
+      #{$this}__burguer {
+        span {
+          &:first-child,
+          &:last-child {
+            opacity: 0;
+          }
+
+          &:nth-child(2) {
+            transform: rotate(45deg);
+
+            &:before {
+              content: "";
+              height: 2px;
+              width: $burguerWidth;
+              position: absolute;
+              left: 0;
+              transform: rotate(90deg);
+              background-color: var(--ec-color-primary);
+            }
+          }
         }
       }
     }

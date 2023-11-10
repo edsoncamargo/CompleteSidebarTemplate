@@ -1,9 +1,13 @@
-<nav class="ec-ns-navbar">
+<nav #eNavbar class="ec-ns-navbar">
   <aside class="ec-ns-navbar__desktop">
     <ng-content select="[desktop]"></ng-content>
   </aside>
 
   <aside class="ec-ns-navbar__mobile">
+    <div class="ec-ns-navbar__mobile__brand">
+      <ng-content select="[mobileBrand]"></ng-content>
+    </div>
+
     <div class="ec-ns-navbar__content">
       <ng-content select="[mobile]"></ng-content>
     </div>

@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core';
-import { NavbarComponent } from './navbar.component';
+import { SidebarComponent } from './sidebar.component';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
-    NavbarComponent
+    SidebarComponent
   ],
   imports: [
     CommonModule,
     BrowserModule
   ],
   exports: [
-    NavbarComponent
-  ]
+    SidebarComponent
+  ],
+  providers: []
 })
-export class NavbarModule { }
+export class SidebarModule { }

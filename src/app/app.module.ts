@@ -1,17 +1,21 @@
-import { AppComponent } from './app.component';
-import { BrowserModule } from '@angular/platform-browser';
-import { NavbarComponent } from './navbar/navbar.component';
 import { NgModule } from '@angular/core';
-import { SidebarComponent } from './sidebar/sidebar.component';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { AppComponent } from './app.component';
+import { NavbarModule, SidebarModule } from 'projects/ec-navigation-suite/src/public-api';
+import { AppRoutingModule } from './app-routing.module';
+import { ShowcaseComponent } from './pages/showcase/showcase.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SidebarComponent,
-    NavbarComponent
+    ShowcaseComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    NavbarModule,
+    SidebarModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

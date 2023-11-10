@@ -1,5 +1,5 @@
 {
-  "name": "my-sidebar-template",
+  "name": "ec-navigation-suite-showcase",
   "version": "1.0.0",
   "scripts": {
     "ng": "ng",
@@ -12,7 +12,7 @@
   "private": true,
   "dependencies": {
     "@angular/animations": "^15.2.10",
-    "@angular/common": "^15.2.10",
+    "@angular/common": "15.2.10",
     "@angular/compiler": "^15.2.10",
     "@angular/core": "^15.2.10",
     "@angular/forms": "^15.2.10",
@@ -21,7 +21,7 @@
     "@angular/platform-browser-dynamic": "^15.2.10",
     "@angular/router": "^15.2.10",
     "rxjs": "~6.5.4",
-    "tslib": "^2.0.0",
+    "tslib": "2.6.2",
     "zone.js": "~0.11.8"
   },
   "devDependencies": {
@@ -31,6 +31,7 @@
     "@angular/language-service": "^15.2.10",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
+    "@types/jest": "29.5.8",
     "@types/node": "^12.11.1",
     "codelyzer": "6.0.2",
     "jasmine-core": "^3.8.0",
@@ -40,9 +41,10 @@
     "karma-coverage-istanbul-reporter": "~3.0.2",
     "karma-jasmine": "~4.0.0",
     "karma-jasmine-html-reporter": "^1.5.0",
+    "ng-packagr": "^15.2.2",
     "protractor": "7.0.0",
     "ts-node": "10.9.1",
     "tslint": "~6.1.0",
-    "typescript": "~5.2.2"
+    "typescript": "^4.8.2"
   }
 }

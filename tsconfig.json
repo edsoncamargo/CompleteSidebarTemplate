@@ -4,6 +4,9 @@
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
+    "paths": {
+      "ec-navigation-suite": ["dist/ec-navigation-suite"]
+    },
     "declaration": false,
     "downlevelIteration": true,
     "experimentalDecorators": true,

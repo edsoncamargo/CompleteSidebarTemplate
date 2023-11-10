@@ -1,2 +1,27 @@
-<app-navbar></app-navbar>
-<app-sidebar></app-sidebar>
+<main>
+  <ec-ns-navbar>
+    <div desktop>
+      <h1>Your custom content here - desktop 😁</h1>
+    </div>
+
+    <div mobileBrand>
+      <h1>YOUR BRAND</h1>
+    </div>
+
+    <div mobile>
+      <h1>Your custom content here - mobile 😁</h1>
+    </div>
+  </ec-ns-navbar>
+
+  <ec-ns-sidebar>
+    <nav options>
+      <ul>
+        <li>Your custom content here 😁</li>
+      </ul>
+    </nav>
+
+    <main route>
+      <router-outlet></router-outlet>
+    </main>
+  </ec-ns-sidebar>
+</main>

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, ElementRef, ViewChild, AfterViewInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'ec-ns-navbar',
@@ -9,7 +9,10 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 })
 
 export class NavbarComponent implements AfterViewInit {
+  @ViewChild('eNavbar') eNavbar!: ElementRef<HTMLButtonElement>;
   @ViewChild('eBurguer') eBurguer!: ElementRef<HTMLButtonElement>;
+
+  @Output() navbarEvent = new EventEmitter<{ isOpen: boolean }>();
 
   ngAfterViewInit() {
     this.handleBurguerClick();
@@ -17,7 +20,18 @@ export class NavbarComponent implements AfterViewInit {
 
   handleBurguerClick() {
     this.eBurguer.nativeElement.addEventListener('click', () => {
-      console.log("entrtei")
+      if (this.eNavbar.nativeElement.classList.contains("ec-ns-navbar--opened")) {
+        this.emitNavbarEvent(false)
+        this.eNavbar.nativeElement.classList.remove("ec-ns-navbar--opened");
+        return;
+      }
+
+      this.emitNavbarEvent(true)
+      this.eNavbar.nativeElement.classList.add("ec-ns-navbar--opened");
     })
+  }
+
+  emitNavbarEvent(isOpen: boolean) {
+    this.navbarEvent.emit({ isOpen })
   }
 }
