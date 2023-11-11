@@ -1,0 +1,14 @@
+<aside
+  #eAccordion
+  [class.ec-ns-accordion--opened]="isOpen"
+  class="ec-ns-accordion ec-ns-accordion--without-border-bottom"
+>
+  <header class="ec-ns-accordion__header">
+    <ng-content select="[title]"></ng-content>
+    <button class="ec-ns-accordion__header__arrow" (click)="toggle()"></button>
+  </header>
+
+  <div class="ec-ns-accordion__content">
+    <ng-content select="[content]"></ng-content>
+  </div>
+</aside>

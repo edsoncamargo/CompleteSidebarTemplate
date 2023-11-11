@@ -1,0 +1,61 @@
+.ec-ns-accordion {
+  $this: &;
+
+  border-top: 0.4px solid var(--ec-color-primary);
+  border-bottom: 0.4px solid var(--ec-color-primary);
+
+  &#{&}--without-border-bottom {
+    border-bottom: none;
+  }
+
+  &#{&}--opened {
+    #{$this}__header {
+      &__arrow {
+        transform: rotate(270deg);
+      }
+    }
+
+    #{$this}__content {
+      max-height: 9999px;
+      padding: 24px 0px;
+      border-top: 0.4px solid var(--ec-color-primary);
+      opacity: 1;
+    }
+  }
+
+  &__header {
+    min-height: 24px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 16px 0px;
+    box-sizing: border-box;
+
+    &__arrow {
+      display: flex;
+      align-items: center;
+      justify-items: center;
+      position: absolute;
+      right: 16px;
+      transform: rotate(90deg);
+      cursor: pointer;
+      transition: all 0.3s ease-in-out;
+
+      &::before {
+        content: "▶";
+        font-size: 0.8em;
+        color: var(--ec-color-primary);
+      }
+    }
+  }
+
+  &__content {
+    max-height: 0px;
+    overflow: hidden;
+    border-top: 0.4px solid transparent;
+    box-sizing: border-box;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, padding 0.3s ease-in-out,
+      border 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+}

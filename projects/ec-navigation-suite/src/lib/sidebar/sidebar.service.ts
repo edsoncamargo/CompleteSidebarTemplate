@@ -12,6 +12,6 @@ export class SidebarService {
   constructor() { }
 
   toggle() {
-    this.sidebarOpenSubject.next();
+    this.sidebarOpenSubject.next(true);
   }
 }

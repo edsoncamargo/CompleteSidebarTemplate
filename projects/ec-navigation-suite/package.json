@@ -9,6 +9,8 @@
     "@angular/core": "^15.2.0"
   },
   "dependencies": {
+    "@fortawesome/angular-fontawesome": "0.12.1",
+    "@fortawesome/free-solid-svg-icons": "6.4.2",
     "tslib": "^2.3.0"
   },
   "sideEffects": false,

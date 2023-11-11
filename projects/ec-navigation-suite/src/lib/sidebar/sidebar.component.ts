@@ -46,13 +46,13 @@ export class SidebarComponent implements AfterViewInit {
 
   close() {
     const eSidebar = this.eSidebar.nativeElement as HTMLElement
-    eSidebar.classList.remove("sidebar--opened");
+    eSidebar.classList.remove("ec-ns-sidebar--opened");
     this.isOpen = false;
   }
 
   open() {
     const eSidebar = this.eSidebar.nativeElement as HTMLElement
-    eSidebar.classList.add("sidebar--opened");
+    eSidebar.classList.add("ec-ns-sidebar--opened");
     this.isOpen = true;
   }
 }

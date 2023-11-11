@@ -9,4 +9,6 @@ export * from './lib/sidebar/sidebar.component';
 export * from './lib/sidebar/sidebar.service';
 export * from './lib/sidebar/sidebar.module';
 
+export * from './lib/accordion/accordion.component';
+export * from './lib/accordion/accordion.module';
 

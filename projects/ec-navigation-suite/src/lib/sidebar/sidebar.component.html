@@ -1,10 +1,10 @@
-<section #eSidebar class="sidebar">
-  <aside class="sidebar__container">
-    <button class="sidebar__container__close" (click)="close()"></button>
+<section #eSidebar class="ec-ns-sidebar">
+  <aside class="ec-ns-sidebar__container">
+    <button class="ec-ns-sidebar__container__close" (click)="close()"></button>
     <ng-content select="[options]"></ng-content>
   </aside>
 
-  <main #eContent class="sidebar__main">
+  <main #eContent class="ec-ns-sidebar__main">
     <ng-content select="[route]"></ng-content>
   </main>
 </section>
