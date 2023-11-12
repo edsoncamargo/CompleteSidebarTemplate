@@ -26,7 +26,7 @@ Feel free to reach out to me in the "Contacts" section. Whether you want to disc
 
 ## How to install
 
-Go to [documentation](ec-navigation-suite.edsoncamargo.dev).
+Go to [documentation](https://ec-navigation-suite.edsoncamargo.dev).
 
 ## Contribution
 
