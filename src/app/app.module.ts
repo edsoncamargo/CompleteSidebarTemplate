@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule } from '@angular/common';
+import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
 import { NavbarModule, SidebarModule, AccordionModule } from 'ec-navigation-suite';
@@ -42,7 +42,7 @@ import { SidebarToggleComponent } from './components/sidebar-toggle/sidebar-togg
       },
     }),
   ],
-  providers: [],
+  providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
