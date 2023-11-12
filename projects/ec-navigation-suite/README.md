@@ -1,24 +1,16 @@
 # EcNavigationSuite
 
-This library was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.0.
+**ec-navigation-suite** is an Angular library that provides three navigation components: `sidebar`, `navbar`, and `accordion`. This suite of components aims to simplify the implementation of common navigation patterns in Angular applications.
 
-## Code scaffolding
+## How to install
 
-Run `ng generate component component-name --project ec-navigation-suite` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module --project ec-navigation-suite`.
-> Note: Don't forget to add `--project ec-navigation-suite` or else it will be added to the default project in your `angular.json` file. 
+\`\`\`bash
+npm i ec-navigation-suite
+\`\`\`
 
-## Build
+Get started at [documentation](ec-navigation-suite.edsoncamargo.dev).
 
-Run `ng build ec-navigation-suite` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Contact
 
-## Publishing
-
-After building your library with `ng build ec-navigation-suite`, go to the dist folder `cd dist/ec-navigation-suite` and run `npm publish`.
-
-## Running unit tests
-
-Run `ng test ec-navigation-suite` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Name: Edson Camargo Menezes
+- Email: ec-navigation-suite@edsoncamargo.dev
