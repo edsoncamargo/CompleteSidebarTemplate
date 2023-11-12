@@ -19,28 +19,36 @@ This will install the necessary dependencies.
 
 ## Development
 
-To start the development server, run:
+To start the development server:
+
+1. Go to projects/ec-navigation-suite-styles and run:
 
 \`\`\`bash
-npm start
+npm run build:watch
 \`\`\`
 
-This will build the library and start a local development server.
+Now, any changes to the default theme you make will be automatically compiled.
 
-## Testing
+2. Go to root and open angular.json:
+   \`\`\`json
+   "styles": [
+   "src/styles.scss",
+   "dist/ec-navigation-suite/styles/ec-navigation-suite-styles.1.0.0.css",
+   "node_modules/prismjs/themes/prism-tomorrow.css"
+   ],
+   \`\`\`
 
-We use [Jest](https://jestjs.io/) for testing. Run the tests with:
+Replace the import from the remote npm package ec-navigation-suite-styles with "dist/ec-navigation-suite/styles/ec-navigation-suite-styles.1.0.0.css".
 
-\`\`\`bash
-npm test
-\`\`\`
+3. Go to root and open app.module.ts:
+
+Here, change all imports from 'ec-navigation-suite' to projects/ec-navigation-suite/src/public-api. This way, any changes you make in projects/ec-navigation-suite will be automatically compiled.
 
 ## Submitting Changes
 
 1. Fork the repository and create a new branch for your feature or bug fix.
-2. Make your changes and ensure that the tests pass.
-3. Commit your changes and push them to your fork.
-4. Open a pull request with a clear title and description.
+2. Commit your changes and push them to your fork.
+3. Open a pull request with a clear title and description.
 
 ## Coding Guidelines
 
@@ -56,4 +64,4 @@ If you find a bug or have a feature request, please open an issue. Provide as mu
 
 Please review our [Code of Conduct](CODE_OF_CONDUCT.md) before contributing. By participating, you agree to abide by its terms.
 
-Thank you for contributing to [Nome do Seu Projeto]!
+Thank you for contributing to [ec-navigation-suite]!
