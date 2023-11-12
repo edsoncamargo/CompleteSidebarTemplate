@@ -1,11 +1,29 @@
 main {
   ec-ns-navbar {
-    a {
-      color: var(--ec-color-neutral-100);
+    div {
+      a {
+        color: var(--ec-color-neutral-100);
+      }
+
+      &:hover {
+        text-decoration: underline;
+      }
     }
 
-    &:hover {
-      text-decoration: underline;
+    .mobile {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      box-sizing: border-box;
+
+      a {
+        font-size: 2em;
+        margin-bottom: 24px;
+
+        &:last-child {
+          margin-bottom: 0px;
+        }
+      }
     }
   }
 
