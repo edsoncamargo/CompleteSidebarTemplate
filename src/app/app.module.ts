@@ -1,21 +1,46 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { CommonModule } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { NavbarModule, SidebarModule } from 'projects/ec-navigation-suite/src/public-api';
+import { NavbarModule, SidebarModule, AccordionModule } from 'ec-navigation-suite';
 import { AppRoutingModule } from './app-routing.module';
-import { ShowcaseComponent } from './pages/showcase/showcase.component';
+import { MarkdownModule, MarkedOptions, PrismPlugin } from 'ngx-markdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { marked } from 'marked';
+import { SidebarComponent } from './pages/docs/sidebar/sidebar.component';
+import { NavbarComponent } from './pages/docs/navbar/navbar.component';
+import { AccordionComponent } from './pages/docs/accordion/accordion.component';
+import { SidebarToggleComponent } from './components/sidebar-toggle/sidebar-toggle.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ShowcaseComponent,
+    SidebarComponent,
+    NavbarComponent,
+    AccordionComponent,
+    SidebarToggleComponent,
   ],
   imports: [
+    CommonModule,
     BrowserModule,
     NavbarModule,
     SidebarModule,
-    AppRoutingModule
+    AccordionModule,
+    AppRoutingModule,
+    HttpClientModule,
+    MarkdownModule.forRoot({
+      loader: HttpClient, // opcional, se você estiver carregando arquivos markdown de forma assíncrona
+      markedOptions: {
+        provide: MarkedOptions,
+        useValue: {
+          renderer: new marked.Renderer(),
+          plugins: [
+            PrismPlugin,
+          ],
+        },
+      },
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]

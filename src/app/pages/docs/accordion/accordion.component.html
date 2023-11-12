@@ -1,0 +1,76 @@
+<section class="showcase">
+  <div class="showcase__section">
+    <h1>Accordion</h1>
+    <p>
+      The Angular Accordion component is a user interface element designed to
+      manage and display collapsible content sections. It allows users to
+      organize information in a structured and space-efficient manner,
+      presenting a clear and user-friendly interface.
+    </p>
+
+    <h2>Installation</h2>
+    <a href="https://www.npmjs.com/package/ec-navigation-suite" target="_blank"
+      >See how to install 🔽</a
+    >
+
+    <h2>Usage</h2>
+    <h3 class="mb">Module Import</h3>
+    <p>
+      Import the module of the component in your <code>app.component.ts</code>.
+    </p>
+    <div markdown [data]="module"></div>
+
+    <h3 class="mb">Component Usage</h3>
+    <p>
+      If you want to use the methods of the service, inject the
+      <code>AccordionService</code> dependency.
+    </p>
+    <div markdown [data]="component"></div>
+
+    <h3 class="mb">Template Usage</h3>
+    <p>
+      Use the <code>ec-ns-accordion</code> selector to use the component, and
+      add your custom content inside the selector.
+    </p>
+    <table>
+      <tr>
+        <th>Selector</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>title</td>
+        <td>
+          This is where you will add a title custom HTML inside the Accordion
+          header.
+        </td>
+      </tr>
+
+      <tr>
+        <td>content</td>
+        <td>
+          This is where you will add all the custom HTML content inside the
+          Accordion content.
+        </td>
+      </tr>
+    </table>
+    <div markdown [data]="html"></div>
+
+    <h2>@Input() Properties</h2>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Default Value</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>isOpen</td>
+        <td>boolean</td>
+        <td>false</td>
+        <td>You can open and close component by isOpen property too.</td>
+      </tr>
+    </table>
+  </div>
+</section>

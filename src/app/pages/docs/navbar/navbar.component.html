@@ -1,0 +1,61 @@
+<section class="showcase">
+  <div class="showcase__section">
+    <h1>Navbar</h1>
+    <p>
+      The Angular Navbar component is a versatile navigation element designed to
+      provide an optimal user experience across various devices. This responsive
+      navbar seamlessly adapts its layout, transitioning to a hamburger button
+      on mobile devices for improved usability.
+    </p>
+
+    <h2>Installation</h2>
+    <a href="https://www.npmjs.com/package/ec-navigation-suite" target="_blank"
+      >See how to install 🔽</a
+    >
+
+    <h2>Usage</h2>
+    <h3 class="mb">Module Import</h3>
+    <p>
+      Import the module of the component in your <code>app.component.ts</code>.
+    </p>
+    <div markdown [data]="module"></div>
+
+    <h3 class="mb">Template Usage</h3>
+    <p>
+      Use the <code>ec-ns-navbar</code> selector to use the component, and add
+      your custom content inside the selector.
+    </p>
+    <table>
+      <tr>
+        <th>Selector</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>desktop</td>
+        <td>
+          Here you will add all navigation content for the desktop resolutions
+          of the navbar.
+        </td>
+      </tr>
+
+      <tr>
+        <td>mobileBrand</td>
+        <td>
+          Here you have the option to add something related to your brand, which
+          will be fixed on the left side of the navbar for mobile resolutions.
+        </td>
+      </tr>
+
+      <tr>
+        <td>mobile</td>
+        <td>
+          Here you will add all navigation content for mobile resolutions of the
+          navbar, which will be inside the modal that opens when clicking the
+          hamburger button.
+        </td>
+      </tr>
+    </table>
+    <div markdown [data]="html"></div>
+  </div>
+</section>

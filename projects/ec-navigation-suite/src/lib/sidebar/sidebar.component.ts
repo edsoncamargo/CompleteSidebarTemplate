@@ -11,7 +11,7 @@ import { SidebarService } from './sidebar.service';
 
 export class SidebarComponent implements AfterViewInit {
 
-  @Input() startOpen: boolean = true;
+  @Input() startsOpen: boolean = true;
 
   isOpen = true;
 
@@ -27,7 +27,7 @@ export class SidebarComponent implements AfterViewInit {
   }
 
   handleInitStatus() {
-    if (this.startOpen) {
+    if (this.startsOpen) {
       this.open()
       return
     }

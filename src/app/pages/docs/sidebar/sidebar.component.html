@@ -1,0 +1,68 @@
+<section class="showcase">
+  <div class="showcase__section">
+    <h1>Sidebar</h1>
+    <p>
+      The Angular Sidebar component is a user interface element designed to
+      create side navigation menus in web applications. It provides an
+      expandable or collapsible sidebar that contains links and navigation
+      options for quick access to different sections or features of the
+      application.
+    </p>
+
+    <h2>Installation</h2>
+    <a href="https://www.npmjs.com/package/ec-navigation-suite" target="_blank"
+      >See how to install 🔽</a
+    >
+
+    <h2>Usage</h2>
+    <h3 class="mb">Module Import</h3>
+    <p>
+      Import the module of the component in your <code>app.component.ts</code>.
+    </p>
+    <div markdown [data]="module"></div>
+
+    <h3 class="mb">Component Usage</h3>
+    <p>
+      If you want to use the methods of the service, inject the
+      <code>SidebarService</code> dependency.
+    </p>
+    <div markdown [data]="component"></div>
+
+    <h3 class="mb">Template Usage</h3>
+    <p>
+      Use the <code>ec-ns-sidebar</code> selector to use the component, and add
+      your custom content inside the selector.
+    </p>
+    <table>
+      <tr>
+        <th>Selector</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>options</td>
+        <td>
+          This is where you will add all the custom HTML inside the Sidebar.
+        </td>
+      </tr>
+    </table>
+    <div markdown [data]="html"></div>
+
+    <h2>@Input() Properties</h2>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Type</th>
+        <th>Default Value</th>
+        <th>Description</th>
+      </tr>
+
+      <tr>
+        <td>startsOpen</td>
+        <td>boolean</td>
+        <td>true</td>
+        <td>Starts the component in the open state.</td>
+      </tr>
+    </table>
+  </div>
+</section>

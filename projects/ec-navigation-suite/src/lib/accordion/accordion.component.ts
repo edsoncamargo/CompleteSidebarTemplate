@@ -1,5 +1,5 @@
 import { NavbarComponent } from './../navbar/navbar.component';
-import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, AfterViewInit, ViewChild, ElementRef, Input } from '@angular/core';
 import { AccordionService } from './accordion.module.service';
 
 @Component({
@@ -13,7 +13,7 @@ import { AccordionService } from './accordion.module.service';
 export class AccordionComponent implements AfterViewInit {
 
   @ViewChild('eAccordion') eAccordion!: ElementRef<HTMLElement>;
-  isOpen: boolean = false;
+  @Input() isOpen: boolean = false;
 
   constructor(private accordionService: AccordionService) { }
 
@@ -26,7 +26,6 @@ export class AccordionComponent implements AfterViewInit {
   }
 
   toggle() {
-    console.log("entrei")
     if (this.isOpen) {
       this.close();
       return

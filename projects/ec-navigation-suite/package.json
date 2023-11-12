@@ -1,16 +1,14 @@
 {
   "name": "ec-navigation-suite",
-  "version": "0.0.1",
+  "version": "1.0.1",
   "scripts": {
     "build": "node ../ec-navigation-suite-styles/compile-scss.js -- --watch"
   },
   "peerDependencies": {
-    "@angular/common": "^15.2.0",
-    "@angular/core": "^15.2.0"
+    "@angular/common": "^16.2.12",
+    "@angular/core": "^16.2.12"
   },
   "dependencies": {
-    "@fortawesome/angular-fontawesome": "0.12.1",
-    "@fortawesome/free-solid-svg-icons": "6.4.2",
     "tslib": "^2.3.0"
   },
   "sideEffects": false,

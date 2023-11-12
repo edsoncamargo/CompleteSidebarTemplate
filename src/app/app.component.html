@@ -1,26 +1,47 @@
 <main>
   <ec-ns-navbar>
     <div desktop>
-      <h1>Your custom content here - desktop 😁</h1>
+      <a href="https://edsoncamargo.dev" target="_blank">edsoncamargo.dev</a>
     </div>
 
     <div mobileBrand>
-      <h1>YOUR BRAND</h1>
+      <a href="https://edsoncamargo.dev" target="_blank">edsoncamargo.dev</a>
     </div>
 
     <div mobile>
-      <h1>Your custom content here - mobile 😁</h1>
+      <h1>Your custom content for mobile here 😁</h1>
     </div>
   </ec-ns-navbar>
 
   <ec-ns-sidebar>
     <nav options>
+      <h1>NAVIGATION SUITE 🧭</h1>
+
+      <h2>Documentation 📃</h2>
+      <h3>Getting started ✅</h3>
+
       <ul>
-        <li>Your custom content here 😁</li>
+        <a
+          href="https://www.npmjs.com/package/ec-navigation-suite"
+          target="_blank"
+        >
+          How to install? 🔽</a
+        >
       </ul>
+
+      <ec-ns-accordion [isOpen]="true">
+        <h3 title>Components 🍕</h3>
+
+        <div content>
+          <a [routerLink]="['/doc/sidebar']">Sidebar</a>
+          <a [routerLink]="['/doc/navbar']">Navbar</a>
+          <a [routerLink]="['/doc/accordion']">Accordion</a>
+        </div>
+      </ec-ns-accordion>
     </nav>
 
     <main route>
+      <ec-showcase-sidebar-toggle />
       <router-outlet></router-outlet>
     </main>
   </ec-ns-sidebar>

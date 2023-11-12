@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, QueryList } from '@angular/core';
 import { Subject } from 'rxjs';
 import { AccordionComponent } from './accordion.component';
 
@@ -14,5 +14,13 @@ export class AccordionService {
 
   toggle(eAccordion: AccordionComponent) {
     this.accordionEventSubject.next({ component: eAccordion, method: 'toggle' });
+  }
+
+  openAll(eAccordions: QueryList<AccordionComponent>) {
+    eAccordions.forEach((eAccordion) => this.accordionEventSubject.next({ component: eAccordion, method: 'open' }))
+  }
+
+  closeAll(eAccordions: QueryList<AccordionComponent>) {
+    eAccordions.forEach((eAccordion) => this.accordionEventSubject.next({ component: eAccordion, method: 'close' }))
   }
 }
