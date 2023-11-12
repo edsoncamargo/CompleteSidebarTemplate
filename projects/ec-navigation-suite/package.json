@@ -1,6 +1,6 @@
 {
   "name": "ec-navigation-suite",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "scripts": {
     "build": "node ../ec-navigation-suite-styles/compile-scss.js -- --watch"
   },
@@ -14,5 +14,16 @@
   "sideEffects": false,
   "devDependencies": {
     "fs-extra": "11.1.1"
-  }
+  },
+  "keywords": [
+    "lib",
+    "angular",
+    "navigation",
+    "navigation-suite",
+    "javascript",
+    "typescript",
+    "sidebar",
+    "navbar",
+    "accordion"
+  ]
 }
