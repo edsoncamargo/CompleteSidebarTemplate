@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { NavbarModule, SidebarModule, AccordionModule } from 'ec-navigation-suite';
+import { NavbarModule, AccordionModule, SidebarModule } from 'ec-navigation-suite';
 import { AppRoutingModule } from './app-routing.module';
 import { MarkdownModule, MarkedOptions, PrismPlugin } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';

@@ -22,6 +22,7 @@
     position: fixed;
     left: 0;
     top: 80px;
+    z-index: var(--ec-color-sidebar);
     background-color: var(--ec-color-primary-dark);
     color: var(--ec-color-neutral-100);
     margin-left: -300px;
@@ -79,5 +80,23 @@
     @media (max-width: 768px) {
       margin-left: 0px;
     }
+  }
+}
+
+.ec-ns-overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100vw;
+  z-index: var(--ec-color-overlay);
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  &--opened {
+    left: 0;
+    opacity: 1;
   }
 }

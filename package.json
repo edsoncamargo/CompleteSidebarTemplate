@@ -20,7 +20,7 @@
     "@angular/platform-browser": "^16.2.12",
     "@angular/platform-browser-dynamic": "^16.2.12",
     "@angular/router": "^16.2.12",
-    "ec-navigation-suite": "1.0.1",
+    "ec-navigation-suite": "^1.0.4",
     "ngx-markdown": "16.0.0",
     "prismjs": "1.29.0",
     "rxjs": "~6.5.4",

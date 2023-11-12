@@ -13,6 +13,7 @@ $burguerDistance: 24px;
   position: fixed;
   overflow: hidden;
   top: 0;
+  z-index: var(--ec-color-navbar);
   z-index: 10;
   background-color: var(--ec-color-primary-dark);
   color: var(--ec-color-neutral-100);

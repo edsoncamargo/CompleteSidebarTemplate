@@ -12,10 +12,13 @@ import { SidebarService } from './sidebar.service';
 export class SidebarComponent implements AfterViewInit {
 
   @Input() startsOpen: boolean = true;
+  @Input() startsOpenMobile: boolean = false;
 
   isOpen = true;
+  isOverlayOpen = false;
 
   @ViewChild('eSidebar') eSidebar: ElementRef;
+
 
   constructor(private sidebarService: SidebarService) {
 
@@ -27,12 +30,19 @@ export class SidebarComponent implements AfterViewInit {
   }
 
   handleInitStatus() {
+    if (this.startsOpenMobile === false && this.isMobile()) {
+      this.close();
+      return
+    }
+
     if (this.startsOpen) {
       this.open()
       return
     }
+  }
 
-    this.close()
+  isMobile() {
+    return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
   }
 
   handleToggleSidebar() {
@@ -48,11 +58,26 @@ export class SidebarComponent implements AfterViewInit {
     const eSidebar = this.eSidebar.nativeElement as HTMLElement
     eSidebar.classList.remove("ec-ns-sidebar--opened");
     this.isOpen = false;
+
+    this.disappearOverlay();
+  }
+
+  disappearOverlay() {
+    if (this.isMobile())
+      this.isOverlayOpen = false;
   }
 
   open() {
     const eSidebar = this.eSidebar.nativeElement as HTMLElement
     eSidebar.classList.add("ec-ns-sidebar--opened");
     this.isOpen = true;
+    console.log("entrei")
+
+    this.appearOverlay();
+  }
+
+  private appearOverlay() {
+    if (this.isMobile())
+      this.isOverlayOpen = true;
   }
 }

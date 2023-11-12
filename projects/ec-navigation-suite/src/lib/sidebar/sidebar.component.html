@@ -8,3 +8,10 @@
     <ng-content select="[route]"></ng-content>
   </main>
 </section>
+
+<div
+  class="ec-ns-overlay"
+  [class.ec-ns-overlay--opened]="isOverlayOpen"
+  ariaHidde="true"
+  (click)="close()"
+></div>
