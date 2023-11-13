@@ -1,62 +1,57 @@
 main {
-  ec-ns-navbar {
-    div {
-      a {
-        color: var(--ec-color-neutral-100);
-      }
+  h1 {
+    font-size: 2em;
+    font-weight: bold;
+    margin-bottom: 32px;
+  }
 
-      &:hover {
-        text-decoration: underline;
-      }
+  h2 {
+    font-size: 1.6em;
+    font-weight: bold;
+    margin-bottom: 8px;
+
+    &::after {
+      content: "";
+      width: 30%;
+      display: block;
+      margin-top: 8px;
+      border-bottom: 0.4px solid var(--ec-color-neutral-100);
+      opacity: 0.6;
     }
+  }
 
+  h3 {
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-top: 24px;
+    margin-bottom: 8px;
+  }
+
+  a {
+    color: var(--ec-color-neutral-100);
+    padding: 8px 0px;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  ec-ns-navbar {
     .mobile {
       height: 100%;
       display: flex;
       flex-direction: column;
       box-sizing: border-box;
 
-      a {
-        font-size: 2em;
-        margin-bottom: 24px;
-
-        &:last-child {
-          margin-bottom: 0px;
-        }
+      ul {
+        display: flex;
+        flex-direction: column;
       }
     }
   }
 
   ec-ns-sidebar {
     nav {
-      h1 {
-        font-size: 2em;
-        font-weight: bold;
-        margin-bottom: 32px;
-      }
-
-      h2 {
-        font-size: 1.6em;
-        font-weight: bold;
-        margin-bottom: 8px;
-
-        &::after {
-          content: "";
-          width: 30%;
-          display: block;
-          margin-top: 8px;
-          border-bottom: 0.4px solid var(--ec-color-neutral-100);
-          opacity: 0.6;
-        }
-      }
-
-      h3 {
-        font-size: 1.2em;
-        font-weight: bold;
-        margin-top: 24px;
-        margin-bottom: 8px;
-      }
-
       ul {
         display: flex;
         flex-direction: column;
@@ -82,15 +77,6 @@ main {
         div {
           display: flex;
           flex-direction: column;
-
-          a {
-            color: var(--ec-color-neutral-100);
-            padding: 8px 0px;
-
-            &:hover {
-              text-decoration: underline;
-            }
-          }
         }
       }
     }

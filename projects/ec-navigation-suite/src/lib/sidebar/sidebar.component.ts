@@ -14,19 +14,25 @@ export class SidebarComponent implements AfterViewInit {
   @Input() startsOpen: boolean = true;
   @Input() startsOpenMobile: boolean = false;
 
+  @Input() position: { topDistance?: number, unitMeasure?: "px" | "%" | "vh" } = { topDistance: 80, unitMeasure: 'px' };
+
   isOpen = true;
   isOverlayOpen = false;
 
   @ViewChild('eSidebar') eSidebar: ElementRef;
+  @ViewChild('eContainer') eContainer: ElementRef;
 
-
-  constructor(private sidebarService: SidebarService) {
-
-  }
+  constructor(private service: SidebarService) { }
 
   ngAfterViewInit() {
+    this.service.sidebarToggle$.subscribe(() => this.handleToggleSidebar())
+    this.handlePosition()
     this.handleInitStatus()
-    this.sidebarService.sidebarOpen$.subscribe(() => this.handleToggleSidebar())
+  }
+
+  handlePosition() {
+    this.eContainer.nativeElement.style.height = `calc(100vh - ${this.position.topDistance}${this.position.unitMeasure})`
+    this.eContainer.nativeElement.style.top = `${this.position.topDistance}${this.position.unitMeasure}`
   }
 
   handleInitStatus() {

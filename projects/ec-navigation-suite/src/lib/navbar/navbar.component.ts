@@ -1,4 +1,5 @@
 import { Component, ElementRef, ViewChild, AfterViewInit, Output, EventEmitter } from '@angular/core';
+import { NavbarService } from './navbar.service';
 
 @Component({
   selector: 'ec-ns-navbar',
@@ -14,21 +15,26 @@ export class NavbarComponent implements AfterViewInit {
 
   @Output() navbarEvent = new EventEmitter<{ isOpen: boolean }>();
 
+  constructor(private service: NavbarService) { }
+
   ngAfterViewInit() {
+    this.service.navbarToggle$.subscribe(() => this.toggle())
     this.handleBurguerClick();
   }
 
   handleBurguerClick() {
-    this.eBurguer.nativeElement.addEventListener('click', () => {
-      if (this.eNavbar.nativeElement.classList.contains("ec-ns-navbar--opened")) {
-        this.emitNavbarEvent(false)
-        this.eNavbar.nativeElement.classList.remove("ec-ns-navbar--opened");
-        return;
-      }
+    this.eBurguer.nativeElement.addEventListener('click', () => this.toggle())
+  }
 
-      this.emitNavbarEvent(true)
-      this.eNavbar.nativeElement.classList.add("ec-ns-navbar--opened");
-    })
+  toggle() {
+    if (this.eNavbar.nativeElement.classList.contains("ec-ns-navbar--opened")) {
+      this.emitNavbarEvent(false)
+      this.eNavbar.nativeElement.classList.remove("ec-ns-navbar--opened");
+      return;
+    }
+
+    this.emitNavbarEvent(true)
+    this.eNavbar.nativeElement.classList.add("ec-ns-navbar--opened");
   }
 
   emitNavbarEvent(isOpen: boolean) {

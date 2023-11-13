@@ -6,12 +6,12 @@ import { Subject } from 'rxjs';
 })
 export class SidebarService {
 
-  private sidebarOpenSubject = new Subject<boolean>();
-  sidebarOpen$ = this.sidebarOpenSubject.asObservable();
+  private sidebarToggleSubject = new Subject<boolean>();
+  sidebarToggle$ = this.sidebarToggleSubject.asObservable();
 
   constructor() { }
 
   toggle() {
-    this.sidebarOpenSubject.next(true);
+    this.sidebarToggleSubject.next(true);
   }
 }

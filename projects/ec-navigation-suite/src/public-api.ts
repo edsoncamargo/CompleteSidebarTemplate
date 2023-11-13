@@ -4,6 +4,7 @@
 
 export * from './lib/navbar/navbar.component';
 export * from './lib/navbar/navbar.module';
+export * from './lib/navbar/navbar.service';
 
 export * from './lib/sidebar/sidebar.component';
 export * from './lib/sidebar/sidebar.service';

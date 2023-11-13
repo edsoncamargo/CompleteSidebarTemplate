@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { NavbarModule, AccordionModule, SidebarModule } from 'ec-navigation-suite';
+import { AccordionModule, SidebarModule, NavbarModule } from 'ec-navigation-suite';
 import { AppRoutingModule } from './app-routing.module';
 import { MarkdownModule, MarkedOptions, PrismPlugin } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -30,7 +30,7 @@ import { SidebarToggleComponent } from './components/sidebar-toggle/sidebar-togg
     AppRoutingModule,
     HttpClientModule,
     MarkdownModule.forRoot({
-      loader: HttpClient, // opcional, se você estiver carregando arquivos markdown de forma assíncrona
+      loader: HttpClient,
       markedOptions: {
         provide: MarkedOptions,
         useValue: {

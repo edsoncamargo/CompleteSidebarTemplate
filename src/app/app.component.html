@@ -9,9 +9,23 @@
     </div>
 
     <div class="mobile" mobile>
-      <a [routerLink]="['/doc/sidebar']">Sidebar</a>
-      <a [routerLink]="['/doc/navbar']">Navbar</a>
-      <a [routerLink]="['/doc/accordion']">Accordion</a>
+      <h1>NAVIGATION SUITE 🧭</h1>
+
+      <h2>Documentation 📃</h2>
+      <h3>Getting started ✅</h3>
+
+      <ul>
+        <a
+          href="https://www.npmjs.com/package/ec-navigation-suite"
+          target="_blank"
+        >
+          How to install? 🔽</a
+        >
+        <h3>Components 🍕</h3>
+        <a [routerLink]="['/doc/sidebar']" (click)="toggle()">Sidebar</a>
+        <a [routerLink]="['/doc/navbar']" (click)="toggle()">Navbar</a>
+        <a [routerLink]="['/doc/accordion']" (click)="toggle()">Accordion</a>
+      </ul>
     </div>
   </ec-ns-navbar>
 

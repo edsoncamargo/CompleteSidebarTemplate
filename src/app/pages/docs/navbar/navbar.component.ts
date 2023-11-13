@@ -33,6 +33,29 @@ export class NavbarComponent {
   \`\`\`
   `
 
+  component = `
+  \`\`\`typescript
+  import { Component, OnInit } from '@angular/core';
+  import { NavbarService } from 'ec-navigation-suite';
+
+  @Component({
+    selector: 'app-component',
+    templateUrl: './app-component.component.html',
+    styleUrls: ['./app-component.component.scss']
+  })
+
+  export class AppComponent implements OnInit {
+    constructor(private navbarService: NavbarService) { }
+
+    ngOnInit(): void { }
+
+    toggle() {
+      this.navbarService.toggle();
+    }
+  }
+  \`\`\`
+  `
+
   html = `
   \`\`\`html
   <ec-ns-navbar>

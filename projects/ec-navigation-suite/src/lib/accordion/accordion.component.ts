@@ -15,10 +15,10 @@ export class AccordionComponent implements AfterViewInit {
   @ViewChild('eAccordion') eAccordion!: ElementRef<HTMLElement>;
   @Input() isOpen: boolean = false;
 
-  constructor(private accordionService: AccordionService) { }
+  constructor(private service: AccordionService) { }
 
   ngAfterViewInit() {
-    this.accordionService.accordionEvent$.subscribe(({ component, method }) => this.handleAccordionEvent(component, method));
+    this.service.accordionEvent$.subscribe(({ component, method }) => this.handleAccordionEvent(component, method));
   }
 
   private handleAccordionEvent(component: AccordionComponent, method: string) {

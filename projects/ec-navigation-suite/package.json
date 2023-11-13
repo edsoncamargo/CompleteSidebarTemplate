@@ -1,6 +1,6 @@
 {
   "name": "ec-navigation-suite",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "scripts": {
     "build": "node ../ec-navigation-suite-styles/compile-scss.js -- --watch"
   },
