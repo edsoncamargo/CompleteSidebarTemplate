@@ -1,6 +1,6 @@
-# EcNavigationSuite
+# ECNavigationSuite
 
-![EcNavigationSuite](./src/assets/images/icon.jpg)
+![ECNavigationSuite](./src/assets/images/icon.jpg)
 
 **ec-navigation-suite** is an Angular library that provides three navigation components: `sidebar`, `navbar`, and `accordion`. This suite of components aims to simplify the implementation of common navigation patterns in Angular applications.
 

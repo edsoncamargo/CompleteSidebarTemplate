@@ -1,4 +1,4 @@
-# Contributing to EcNavigationSuite
+# Contributing to ECNavigationSuite
 
 Thank you for your interest in contributing to [ec-navigation-suite] 🚀 We welcome contributions from the community 😁
 
