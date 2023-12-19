@@ -4,13 +4,12 @@ import { SidebarService } from 'ec-navigation-suite';
 @Component({
   selector: 'ec-showcase-sidebar-toggle',
   templateUrl: './sidebar-toggle.component.html',
-  styleUrls: ['./sidebar-toggle.component.scss']
+  styleUrls: ['./sidebar-toggle.component.scss'],
 })
 export class SidebarToggleComponent {
-  constructor(private sidebarService: SidebarService) { }
+  constructor(private sidebarService: SidebarService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
   toggleSidebar() {
     this.sidebarService.toggle();

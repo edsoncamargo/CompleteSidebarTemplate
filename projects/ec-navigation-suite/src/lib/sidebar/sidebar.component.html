@@ -11,7 +11,7 @@
 
 <div
   class="ec-ns-overlay"
-  [class.ec-ns-overlay--opened]="isOverlayOpen"
-  ariaHidde="true"
+  [class.ec-ns-overlay--opened]="isOpen && isMobile()"
+  aria-hidden="true"
   (click)="close()"
 ></div>

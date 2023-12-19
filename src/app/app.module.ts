@@ -1,9 +1,17 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { CommonModule, HashLocationStrategy, LocationStrategy } from '@angular/common';
+import {
+  CommonModule,
+  HashLocationStrategy,
+  LocationStrategy,
+} from '@angular/common';
 
 import { AppComponent } from './app.component';
-import { AccordionModule, SidebarModule, NavbarModule } from 'ec-navigation-suite';
+import {
+  AccordionModule,
+  NavbarModule,
+  SidebarModule,
+} from 'ec-navigation-suite';
 import { AppRoutingModule } from './app-routing.module';
 import { MarkdownModule, MarkedOptions, PrismPlugin } from 'ngx-markdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
@@ -35,14 +43,12 @@ import { SidebarToggleComponent } from './components/sidebar-toggle/sidebar-togg
         provide: MarkedOptions,
         useValue: {
           renderer: new marked.Renderer(),
-          plugins: [
-            PrismPlugin,
-          ],
+          plugins: [PrismPlugin],
         },
       },
     }),
   ],
   providers: [{ provide: LocationStrategy, useClass: HashLocationStrategy }],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
